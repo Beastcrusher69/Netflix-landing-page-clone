@@ -1,0 +1,81 @@
+:root{
+    --netflix-red : rgba(229, 9, 20, 1) ;
+}
+
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+
+body{
+    font-family : sans-serif ;
+}
+
+#header{
+    display : flex ; 
+    align-items : center ; 
+    height : 80px ;
+    margin : 0 24px;
+}
+
+#netflix-span{
+    margin-right : auto ; 
+}
+
+#netflix-span path{
+    fill : var(--netflix-red);
+}
+
+#netflix-svg{
+    height : 30px ;
+    width : 110px ;
+}
+
+#language{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height : 32px;
+    width : 126px ; 
+    padding : 6px 36px;
+    background-color: black;
+    color: white ;
+    border-radius: 0.25rem;
+    font-size: 16px ;
+}
+
+.icons{
+    display : inline-block ;
+}
+
+.icons path{
+    fill : white ;
+}
+
+#globe,#arrow {
+    position : relative ;
+    top : 3px ;
+}
+
+#globe{
+    left:30px;
+}
+
+#arrow{
+    right:30px;
+}
+
+#sign-in{
+    display : inline-block ; 
+    text-decoration: none;
+    color:white ;
+    font-size : 14px ;
+    height : 32px;
+    width : 76.9px ;
+    background-color : var(--netflix-red) ;
+    border-radius : 0.25rem ;
+    padding : 8px 15px ;
+    font-weight : 600;
+
+
+}
