@@ -13,10 +13,15 @@ body{
 }
 
 #header{
+    position:absolute;
+    z-index:999999;
+    width:100%;
+}
+
+#header-div{
     display : flex ; 
     align-items : center ; 
-    height : 80px ;
-    margin : 0 24px;
+    margin : auto;
 }
 
 #netflix-span{
@@ -52,7 +57,7 @@ body{
     fill : white ;
 }
 
-#globe,#arrow {
+.icons {
     position : relative ;
     top : 3px ;
 }
@@ -78,4 +83,95 @@ body{
     font-weight : 600;
 
 
+}
+
+#image-div{
+    height:100%;
+    background-image: url(assets/bg-image.jpg) ;
+    background-position: center;
+    background-size: cover;
+    transform: scale(1.25) translateY(-10%);
+    top:0;
+
+}
+
+#gradient{
+    height:100%;
+    background-image: linear-gradient(rgba(0,0,0,0.8) 10%,rgba(0,0,0,0),rgba(0,0,0,0.8) 90%)
+}
+
+#text-wrapper-1{
+
+}
+
+
+@media (min-width: 1280px){
+#header-div {
+    width: calc( 83.33333333333334% - 6rem );
+    height: 5.375rem;
+
+}
+}
+
+@media (min-width : 960px){
+    #div-1{
+        height:43.75rem;
+    }
+}
+
+
+
+@media (min-width: 960px) and (max-width:1280px){
+    #header-div {
+        height: 5.375rem;
+        width: calc(100% - 4rem);
+    
+    }
+}
+
+
+
+@media (min-width: 600px) and (max-width:960px){
+#header-div{
+    width: calc(100% - 4rem);
+    height: 5rem ;
+    
+}
+
+#language-div{
+    position:relative ;
+    left:15px;
+}
+
+#div-1{
+    height:32rem;
+}
+}
+
+@media (max-width : 600px){
+
+#header-div{
+    height:5rem;
+    width:calc(100% - 3rem);
+}    
+#language{
+    width: 0.0625rem!important ;
+}
+#language-div{
+    position:relative;
+    left:15px;
+}
+.icons{
+    top:3px;
+}
+#globe{
+    left:34px;
+}
+#arrow{
+    right:34px;
+}
+
+#div-1{
+    height:30rem;
+}
 }
