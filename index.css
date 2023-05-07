@@ -1,5 +1,6 @@
 :root{
     --netflix-red : rgba(229, 9, 20, 1) ;
+    --transparent-black : rgba(0 ,0 ,0 ,0.5);
 }
 
 *{
@@ -9,13 +10,17 @@
 }
 
 body{
-    font-family : sans-serif ;
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    width : 100%;
+    overflow-x : hidden ;
+
 }
 
 #header{
     position:absolute;
     z-index:999999;
     width:100%;
+    display:block;
 }
 
 #header-div{
@@ -47,6 +52,7 @@ body{
     color: white ;
     border-radius: 0.25rem;
     font-size: 16px ;
+    background-color: var(--transparent-black);
 }
 
 .icons{
@@ -63,11 +69,11 @@ body{
 }
 
 #globe{
-    left:30px;
+    left:32px;
 }
 
 #arrow{
-    right:30px;
+    right:32px;
 }
 
 #sign-in{
@@ -85,24 +91,102 @@ body{
 
 }
 
+main{
+    position: absolute;
+    width:100%;
+}
+
 #image-div{
+    width:100%;
+    height:inherit;
+    position:absolute;
+    display:grid;
+    place-items:center;
+    justify-content: center;
+}
+
+img{
+    width:100%;
     height:100%;
-    background-image: url(assets/bg-image.jpg) ;
     background-position: center;
-    background-size: cover;
+    object-fit:cover;
     transform: scale(1.25) translateY(-10%);
-    top:0;
+    position: absolute;
 
 }
 
 #gradient{
     height:100%;
-    background-image: linear-gradient(rgba(0,0,0,0.8) 10%,rgba(0,0,0,0),rgba(0,0,0,0.8) 90%)
+    width:100%;
+    background-image: linear-gradient(rgba(0,0,0,0.85) 0,rgba(0,0,0,0.3) 60%,rgba(0,0,0,0.9) 100%);
+    position: absolute;
+    z-index:2;
 }
 
 #text-wrapper-1{
+    color:white;
+    z-index:3;
+    width:calc(100vw - 64px);
+}
+
+h1{
+    text-align:center;
+    font-size:2rem;
+    font-weight : 700;
+}
+
+#p-1{
+    text-align : center ;
+    font-size:1.125rem;
+    font-weight : 400;
+    margin : 1rem 0 0 ;
+}
+
+#h3-1{
+    text-align : center ;
+    font-size:1.125rem;
+    font-weight : 400;
+    margin:1.5rem;
+}
+
+form{
+    width:calc(100% - 64px);
+    margin:auto;
+}
+
+
+#getstarted-div{
+    width:100%;
+    max-width:36.625rem;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    height:56px;
+}
+
+#get-started{
+    width:12.5rem;
+    font-size:24px;
+    font-weight:600;
+    color:white;
+    background-color: var(--netflix-red);
+    border : none;
 
 }
+.email{
+    width:calc(100% - 13rem);
+    border : 1px solid grey;
+    background-color: var(--transparent-black);
+    color : white ;
+    padding:15px;
+    font-size:1rem;
+
+}
+
+#get-started,.email{
+    border-radius : 4px;
+}
+
 
 
 @media (min-width: 1280px){
@@ -117,6 +201,35 @@ body{
     #div-1{
         height:43.75rem;
     }
+
+    h1{
+        font-size:2.8rem;
+        font-weight:900;
+    }
+
+    #p-1{
+        font-size:1.5rem;
+        font-weight:400;
+    }
+    #h3-1{
+        font-size:1.25rem;
+        font-weight:400;
+    }
+
+    #text-wrapper-1{
+        max-width:870.63px;
+    }
+}
+
+@media (min-width : 600px){
+   
+}
+
+@media(max-width : 960px){
+    #text-wrapper-1{
+        max-width:644.7px;
+    }
+    
 }
 
 
@@ -125,7 +238,6 @@ body{
     #header-div {
         height: 5.375rem;
         width: calc(100% - 4rem);
-    
     }
 }
 
@@ -149,6 +261,10 @@ body{
 }
 
 @media (max-width : 600px){
+
+#text-wrapper-1{
+    width : calc(100% - 3rem);
+}    
 
 #header-div{
     height:5rem;
