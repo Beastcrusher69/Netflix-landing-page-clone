@@ -13,7 +13,7 @@ body{
     font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
     width : 100%;
     overflow-x : hidden ;
-
+    background-color: #000;
 }
 
 #header{
@@ -100,12 +100,10 @@ main{
     width:100%;
     height:inherit;
     position:absolute;
-    display:grid;
-    place-items:center;
     justify-content: center;
 }
 
-img{
+#bg-img{
     width:100%;
     height:100%;
     background-position: center;
@@ -125,8 +123,8 @@ img{
 
 #text-wrapper-1{
     color:white;
-    z-index:3;
     width:calc(100vw - 64px);
+    margin:auto;
 }
 
 h1{
@@ -144,9 +142,9 @@ h1{
 
 #h3-1{
     text-align : center ;
-    font-size:1.125rem;
+    font-size:1.1rem;
     font-weight : 400;
-    margin:1.5rem;
+    margin-top:1.5rem;
 }
 
 form{
@@ -160,8 +158,10 @@ form{
     max-width:36.625rem;
     margin:auto;
     display:flex;
+    flex-direction: row;
     justify-content:space-between;
     height:56px;
+    margin-top : 1rem ;
 }
 
 #get-started{
@@ -187,7 +187,71 @@ form{
     border-radius : 4px;
 }
 
+#wrap{
+    width: 100%;
+    position:absolute;
+    z-index:3;
+    height:calc(100% - 86px);
+    bottom : 0 ;
+    display:grid ;
+    place-items : center ;
 
+}
+
+.hl{
+    width:100%;
+    height:8px ; 
+    background-color: rgb(35,35,35);
+    
+}
+
+
+
+.text-wrappers{
+    color : red ;
+    display : inline-block ;
+}
+
+.left-right{
+    display :flex ;
+    width : calc(100% - 64px) ;
+    margin: 72px auto;
+    align-items:center;
+
+}
+
+.half{
+    width:50%;
+}
+
+.images{
+    max-width:inherit;
+    height:auto;
+}
+
+
+
+@media(max-width : 520px){
+
+    #getstarted-div{
+        flex-direction:column ;
+        align-items : center ;
+        height : auto ;
+    }
+
+    .email{
+        height  : 3rem ;
+        width : 100%;
+    }
+
+    #get-started{
+        height : 3rem ;
+        width :10rem ;
+        margin-top : 1rem ;
+        font-size :1.2rem ;
+    }
+
+}
 
 @media (min-width: 1280px){
 #header-div {
@@ -228,6 +292,10 @@ form{
 @media(max-width : 960px){
     #text-wrapper-1{
         max-width:644.7px;
+    }
+
+    #wrap{
+        height:calc(100% - 80px);
     }
     
 }
