@@ -1,6 +1,7 @@
 :root{
     --netflix-red : rgba(229, 9, 20, 1) ;
     --transparent-black : rgba(0 ,0 ,0 ,0.5);
+    --faq-grey : rgba(45, 45, 45, 1) ;
 }
 
 *{
@@ -247,9 +248,10 @@ form{
     justify-content:space-between;
     padding : 24px;
     font-size :18px ;
-    background-color: rgba(45, 45, 45, 1);
+    background-color: var(--faq-grey);
     border :none ;
     color:white ;
+    transition : background-color 0.2s ease-in-out ;
 }
 
 .cross-svg{
@@ -257,7 +259,13 @@ form{
     width: 20px;
 }
 
+li{
+    margin-bottom : 10px ;
+}
 
+ul{
+    margin-top :20px;
+}
 
 @media(max-width : 520px){
 
@@ -441,4 +449,19 @@ form{
 
 #faq{
     justify-content: center;
+}
+
+.faq-text{
+    background-color: var(--faq-grey);
+    margin-top: 1px;
+    padding :0px;
+    font-size :18px !important ;
+}
+
+.faq-text p:first-of-type{
+    margin-top: 0;
+}
+
+.faq-buttons:hover{
+    background-color: rgb(98, 96, 96) ;
 }
